@@ -1,0 +1,382 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Prompt', sans-serif;
+    background: linear-gradient(135deg, #e8f7ff, #cceaff, #f1f8ff);
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #557b9f;
+}
+
+.sky {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.float-heart {
+    position: absolute;
+    bottom: -50px;
+    animation: floatUp linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    margin: auto;
+    padding: 20px;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 35px 15px;
+}
+
+.small-label {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #83aecd;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Itim', cursive;
+    font-size: clamp(42px, 8vw, 68px);
+    line-height: 1.2;
+    color: #5c91bd;
+    text-shadow: 2px 4px 15px #ffffff;
+}
+
+.hero h1 span {
+    color: #80b6df;
+}
+
+.subtitle {
+    margin-top: 20px;
+    line-height: 2;
+    font-size: 16px;
+    color: #789bb9;
+}
+
+.cloud {
+    position: absolute;
+    font-size: 65px;
+    opacity: 0.7;
+    animation: cloudMove 5s ease-in-out infinite alternate;
+}
+
+.cloud-left {
+    top: 15%;
+    left: 4%;
+}
+
+.cloud-right {
+    bottom: 17%;
+    right: 5%;
+    animation-delay: 1s;
+}
+
+@keyframes cloudMove {
+    to {
+        transform: translateY(-18px);
+    }
+}
+
+/* ซองจดหมาย */
+
+.envelope {
+    width: 190px;
+    height: 130px;
+    position: relative;
+    margin: 45px auto 30px;
+    cursor: pointer;
+    filter: drop-shadow(0 10px 15px #79acd455);
+    transition: 0.4s;
+}
+
+.envelope:hover {
+    transform: translateY(-8px) scale(1.04);
+}
+
+.envelope-back {
+    position: absolute;
+    inset: 0;
+    background: #8ebde5;
+    border-radius: 8px;
+}
+
+.letter-preview {
+    position: absolute;
+    width: 165px;
+    height: 110px;
+    background: #ffffff;
+    left: 13px;
+    top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Itim', cursive;
+    color: #77a9d3;
+    font-size: 23px;
+}
+
+.envelope-front {
+    position: absolute;
+    inset: 0;
+    background: #b4dcf8;
+    clip-path: polygon(0 0, 50% 55%, 100% 0, 100% 100%, 0 100%);
+    border-radius: 7px;
+}
+
+.envelope-flap {
+    position: absolute;
+    inset: 0;
+    background: #d5ecff;
+    clip-path: polygon(0 0, 100% 0, 50% 60%);
+    transform-origin: top;
+    transition: transform 0.7s;
+}
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+.heart-seal {
+    position: absolute;
+    top: 48px;
+    left: 77px;
+    width: 36px;
+    height: 36px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #80b9e7;
+    font-size: 19px;
+    z-index: 2;
+}
+
+.main-button,
+.next-button {
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #8ec5ed, #76aee0);
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 8px 20px #79acd455;
+    transition: 0.3s;
+}
+
+.main-button:hover,
+.next-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px #79acd477;
+}
+
+.hint {
+    margin-top: 17px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #9bb9d3;
+}
+
+/* จดหมาย */
+
+.hidden {
+    display: none !important;
+}
+
+.letter-section,
+.surprise-section {
+    padding: 45px 0 80px;
+    text-align: center;
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.letter-card,
+.surprise-card {
+    max-width: 550px;
+    margin: auto;
+    padding: 45px 30px;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid white;
+    border-radius: 30px;
+    box-shadow: 0 15px 45px #7baedb30;
+    backdrop-filter: blur(10px);
+}
+
+.letter-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.letter-card h2,
+.surprise-card h2 {
+    font-family: 'Itim', cursive;
+    font-size: 34px;
+    color: #649bc5;
+    margin-bottom: 20px;
+}
+
+.line {
+    width: 60px;
+    height: 3px;
+    background: #b5dafa;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.letter-card p {
+    font-size: 15px;
+    line-height: 2.3;
+    color: #718da7;
+    margin: 18px 0;
+}
+
+.letter-card h3 {
+    font-family: 'Itim', cursive;
+    font-size: 32px;
+    color: #77acd7;
+    margin: 15px 0;
+}
+
+.heart-divider {
+    font-size: 25px;
+    color: #89bde5;
+    margin: 25px;
+}
+
+.letter-card .last-message {
+    color: #629bc7;
+    font-weight: 500;
+}
+
+.next-button {
+    margin-top: 25px;
+}
+
+/* หน้าสุดท้าย */
+
+.surprise-card {
+    padding: 45px 25px;
+}
+
+.big-heart {
+    font-size: 80px;
+    animation: heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.surprise-text {
+    color: #7795b0;
+    line-height: 2.2;
+    font-size: 15px;
+    margin: 25px 0;
+}
+
+.final-title {
+    font-family: 'Itim', cursive;
+    font-size: clamp(32px, 7vw, 48px);
+    color: #79b1dc;
+    line-height: 1.3;
+    margin: 25px 0;
+}
+
+.response {
+    display: none;
+    margin-top: 35px;
+    animation: appear 1s ease;
+}
+
+.response.show {
+    display: block;
+}
+
+.response p {
+    line-height: 2;
+    margin: 10px;
+}
+
+.footer {
+    margin-top: 50px;
+    font-size: 12px;
+    color: #9bb9d3;
+}
+
+/* มือถือ */
+
+@media (max-width: 600px) {
+    .container {
+        padding: 12px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .cloud {
+        font-size: 40px;
+    }
+
+    .letter-card,
+    .surprise-card {
+        padding: 35px 20px;
+    }
+
+    .letter-card p {
+        font-size: 14px;
+    }
+}

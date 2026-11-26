@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Apology</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="sky" id="sky"></div>
+
+    <main class="container">
+
+        <!-- หน้าแรก -->
+        <section class="hero" id="home">
+            <div class="cloud cloud-left">☁️</div>
+            <div class="cloud cloud-right">☁️</div>
+
+            <div class="small-label">A SPECIAL MESSAGE FOR YOU</div>
+
+            <h1>
+                I'm Sorry,<br>
+                <span>Beautiful Person</span>
+            </h1>
+
+            <p class="subtitle">
+                มีบางอย่างที่อยากบอก.....<br>
+                ช่วยเปิดอ่านหน่อยได้ไหม?
+            </p>
+
+            <div class="envelope" id="envelope">
+                <div class="envelope-back"></div>
+                <div class="letter-preview">For You ♡</div>
+                <div class="envelope-front"></div>
+                <div class="envelope-flap"></div>
+                <div class="heart-seal">♥</div>
+            </div>
+
+            <button class="main-button" id="openBtn">
+                เปิดจดหมาย 💌
+            </button>
+
+            <p class="hint">CLICK TO OPEN </p>
+        </section>
+
+        <!-- จดหมายขอโทษ -->
+        <section class="letter-section hidden" id="letterSection">
+            <div class="letter-card">
+                <div class="letter-icon">💌</div>
+
+                <h2>For Beautiful Person</h2>
+
+                <div class="line"></div>
+
+                <p>
+                    ก่อนอื่นเลย...<br>
+                    เราอยากบอกว่า
+                </p>
+
+                <h3>ขอโทษนะ 🥺</h3>
+
+                <p>
+                    อยากขอโทษกับสิ่งที่เกิดขึ้นนะ<br>
+                    ถ้าคำพูดหรือการกระทำของพี่ที่ทำให้หนูเสียใ<br>
+                    หรือรู้สึกไม่ดี พี่เสียใจจริง ๆ
+                </p>
+
+                <p>
+                    พี่พร้อมที่จะรับฟังในสิ่งที่หนูรู้สึก<br>
+                    รวมถึงยอมรับในส่วนที่ตัวเองทำผิด<br>
+                    และจะพยายามปรับปรุงให้ดีขึ้น<br>
+                    ไม่ใช่แค่พูดเพื่อให้เรื่องนี้ผ่านไป
+                </p>
+
+                <p class="last-message">
+                    ขอให้ได้มีโอกาสดูแลความรู้สึกหนู<br>
+                    ให้ดีกว่านี้อีกครั้งนะ 
+                </p>
+
+                <button class="next-button" id="nextBtn">
+                    ยังมีอีกเรื่องอยากบอก... ✨
+                </button>
+            </div>
+        </section>
+
+        <!-- เซอร์ไพรส์ -->
+        <section class="surprise-section hidden" id="surpriseSection">
+            <div class="surprise-card">
+                <div class="big-heart">🍀</div>
+
+                <p class="small-label">ONE LAST THING...</p>
+
+
+                <p class="surprise-text">
+                    ต่อไปมีอะไรก็ขอให้บอกกันตรงๆนะ<br>
+                    ไม่อยากให้เก็บไว้จนพ้นอีกวัน<br>
+                    กลัวว่ามันจะทำให้ความรู้สึกของหนูมันแย่ไปกว่านี้
+                </p>
+
+                <button class="main-button" id="forgiveBtn">
+                    ดีกันนะ 🫂
+                </button>
+
+                <div class="response" id="response">
+                    <h2>เย้! ขอบคุณนะ 🥹</h2>
+                    
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
