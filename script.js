@@ -28,7 +28,7 @@ const letterSection = document.getElementById("letterSection");
 function openLetter() {
     envelope.classList.add("open");
 
-    openBtn.textContent = "กำลังเปิดจดหมาย... 💙";
+    openBtn.textContent = "กำลังเปิดจดหมาย...";
     openBtn.disabled = true;
 
     setTimeout(() => {
@@ -66,7 +66,7 @@ const response = document.getElementById("response");
 forgiveBtn.addEventListener("click", () => {
     response.classList.add("show");
 
-    forgiveBtn.textContent = "🍀 ขอบคุณนะ 🍀";
+    forgiveBtn.textContent = "ขอบคุณนะ";
 
     response.scrollIntoView({
         behavior: "smooth",
@@ -78,7 +78,7 @@ forgiveBtn.addEventListener("click", () => {
 
 // เอฟเฟกต์หัวใจและประกาย
 function createConfetti() {
-    const symbols = ["", "", "", ""];
+    const symbols = ["", "", "", "✨", "🌷"];
 
     for (let i = 0; i < 45; i++) {
         const item = document.createElement("div");
